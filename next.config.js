@@ -1,6 +1,12 @@
 module.exports = {
   images: {
-    domains: ['gravatar.com']
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "gravatar.com",
+        pathname: "/**",
+      },
+    ],
   },
   eslint: {
     // dirs: ['components', 'layouts', 'lib', 'pages']
@@ -8,17 +14,17 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/:path*{/}?',
+        source: "/:path*{/}?",
         headers: [
           {
-            key: 'Permissions-Policy',
-            value: 'interest-cohort=()'
-          }
-        ]
-      }
-    ]
+            key: "Permissions-Policy",
+            value: "interest-cohort=()",
+          },
+        ],
+      },
+    ];
   },
-  transpilePackages: ['dayjs']
+  transpilePackages: ["dayjs"],
   // webpack: (config, { dev, isServer }) => {
   //   // Replace React with Preact only in client production build
   //   if (!dev && !isServer) {
@@ -30,4 +36,4 @@ module.exports = {
   //   }
   //   return config
   // }
-}
+};
