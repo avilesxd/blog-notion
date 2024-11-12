@@ -1,0 +1,39 @@
+name: Youtube Videos
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
+      GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+      API_KEY: ${{ secrets.API_KEY}}
+      CHANNEL_ID: ${{ secrets.CHANNEL_ID}}
+
+    steps:
+      - name: Source code checkout
+        uses: actions/checkout@v2
+
+      - name: Configure Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Command
+        run: npm run youtube || exit 1
+
+      - name: Commit and Push
+        run: |
+          git config user.email "${{ secrets.GIT_USER_EMAIL }}"
+          git config user.name "${{ secrets.GIT_USER_NAME }}"
+          git add .
+          git commit -m "[bot] New youtube videos"
+          git push

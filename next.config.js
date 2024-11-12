@@ -6,6 +6,11 @@ module.exports = {
         hostname: "gravatar.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "i.ytimg.com",
+        port: "",
+      },
     ],
   },
   eslint: {
