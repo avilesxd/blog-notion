@@ -7,7 +7,7 @@ function VideosYoutube() {
         Latest videos on YouTube:
       </h3>
       <ul className="mx-auto py-4 grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-3 text-white">
-        {youtube?.slice(0, 2).map((item) => (
+        {youtube?.slice(0, 3).map((item) => (
           <li key={item.videoId}>
             <a
               href={`https://www.youtube.com/watch?v=${item.videoId}`}
