@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/lib/theme";
 import "@/styles/globals.css";
 import "@/styles/notion.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "katex/dist/katex.min.css";
 import App from "next/app";
 import dynamic from "next/dynamic";
@@ -33,6 +34,7 @@ export default function MyApp({ Component, pageProps, config, locale }) {
             {process.env.VERCEL_ENV === "production" &&
               config?.analytics?.provider === "ga" && <Gtag />}
             <Component {...pageProps} />
+            <SpeedInsights/>
             <Analytics />
           </>
         </ThemeProvider>
