@@ -89,6 +89,7 @@ class MyDocument extends Document {
             </>
           )}
           <link rel="icon" href="/favicon.png" />
+          <link rel="manifest" href="/manifest.json" />
           <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/feed"></link>
           {config.appearance === 'auto'
             ? (

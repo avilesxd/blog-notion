@@ -2,7 +2,7 @@
   "name": "Personal Blog",
   "short_name": "Blog",
   "description": "This is my personal blog, here I am going to share my knowledge about programming.",
-  "start_url": "https://avilesxd.vercel.app/",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
