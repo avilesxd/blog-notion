@@ -6,10 +6,10 @@ settings:
 
 patchedDependencies:
   notion-utils@6.16.0:
-    hash: jbbxfh6oczxvsqepw4jd23wxpm
+    hash: 390cc53546baebaa4bbfbee02357eab8c8f5c22b978129f6f77b05e2193e5993
     path: patches/notion-utils@6.16.0.patch
   react-notion-x@6.16.0:
-    hash: yir45aqvaz5igbuxsxnbc4p6gy
+    hash: 418d0c7a675d77244b2d36a7b9b1d76df857f8e9ec4b3393080375648c90ab96
     path: patches/react-notion-x@6.16.0.patch
 
 importers:
@@ -51,7 +51,7 @@ importers:
         version: 6.16.0
       notion-utils:
         specifier: ^6.16.0
-        version: 6.16.0(patch_hash=jbbxfh6oczxvsqepw4jd23wxpm)
+        version: 6.16.0(patch_hash=390cc53546baebaa4bbfbee02357eab8c8f5c22b978129f6f77b05e2193e5993)
       preact:
         specifier: ^10.19.2
         version: 10.19.2
@@ -69,7 +69,7 @@ importers:
         version: 18.2.0(react@18.2.0)
       react-notion-x:
         specifier: ^6.16.0
-        version: 6.16.0(patch_hash=yir45aqvaz5igbuxsxnbc4p6gy)(@babel/runtime@7.23.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(webpack@5.89.0)
+        version: 6.16.0(patch_hash=418d0c7a675d77244b2d36a7b9b1d76df857f8e9ec4b3393080375648c90ab96)(@babel/runtime@7.23.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(webpack@5.89.0)
       react-tweet-embed:
         specifier: ^2.0.0
         version: 2.0.0(react@18.2.0)
@@ -4027,7 +4027,7 @@ snapshots:
       eslint: 8.53.0
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0)
-      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0)
+      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.53.0)
       eslint-plugin-react: 7.33.2(eslint@8.53.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.53.0)
@@ -4050,8 +4050,8 @@ snapshots:
       debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.53.0
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0)
-      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0)
+      eslint-plugin-import: 2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.2
       is-core-module: 2.13.1
@@ -4062,7 +4062,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0):
+  eslint-module-utils@2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -4073,7 +4073,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0):
+  eslint-plugin-import@2.29.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0):
     dependencies:
       array-includes: 3.1.7
       array.prototype.findlastindex: 1.2.3
@@ -4083,7 +4083,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.53.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.0(eslint@8.53.0))(eslint@8.53.0))(eslint@8.53.0)
+      eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.11.0(eslint@8.53.0)(typescript@5.2.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.53.0)
       hasown: 2.0.0
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -5182,12 +5182,12 @@ snapshots:
     dependencies:
       got: 11.8.6
       notion-types: 6.16.0
-      notion-utils: 6.16.0(patch_hash=jbbxfh6oczxvsqepw4jd23wxpm)
+      notion-utils: 6.16.0(patch_hash=390cc53546baebaa4bbfbee02357eab8c8f5c22b978129f6f77b05e2193e5993)
       p-map: 5.5.0
 
   notion-types@6.16.0: {}
 
-  notion-utils@6.16.0(patch_hash=jbbxfh6oczxvsqepw4jd23wxpm):
+  notion-utils@6.16.0(patch_hash=390cc53546baebaa4bbfbee02357eab8c8f5c22b978129f6f77b05e2193e5993):
     dependencies:
       is-url-superb: 6.1.0
       mem: 9.0.2
@@ -5459,13 +5459,13 @@ snapshots:
       react-lifecycles-compat: 3.0.4
       warning: 4.0.3
 
-  react-notion-x@6.16.0(patch_hash=yir45aqvaz5igbuxsxnbc4p6gy)(@babel/runtime@7.23.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(webpack@5.89.0):
+  react-notion-x@6.16.0(patch_hash=418d0c7a675d77244b2d36a7b9b1d76df857f8e9ec4b3393080375648c90ab96)(@babel/runtime@7.23.2)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(webpack@5.89.0):
     dependencies:
       '@fisch0920/medium-zoom': 1.0.7
       '@matejmazur/react-katex': 3.1.3(katex@0.15.6)(react@18.2.0)
       katex: 0.15.6
       notion-types: 6.16.0
-      notion-utils: 6.16.0(patch_hash=jbbxfh6oczxvsqepw4jd23wxpm)
+      notion-utils: 6.16.0(patch_hash=390cc53546baebaa4bbfbee02357eab8c8f5c22b978129f6f77b05e2193e5993)
       prismjs: 1.29.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
