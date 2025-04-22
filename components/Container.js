@@ -11,6 +11,7 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
 
   const url = BLOG.path.length ? `${BLOG.link}/${BLOG.path}` : BLOG.link
   const meta = {
+
     title: BLOG.title,
     type: 'website',
     ...customMeta
@@ -19,10 +20,19 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
     <div>
       <Head>
         <title>{meta.title}</title>
-        {/* Google AdSense*/}
+        {/* Google AdSense */}
         <meta name="google-adsense-account" content="ca-pub-5625393864502632"></meta>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5625393864502632"
           crossorigin="anonymous"></script>
+        {/*Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF0MBVRHC5"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-FF0MBVRHC5');
+        </script>
         {/* <meta content={BLOG.darkBackground} name="theme-color" /> */}
         <meta name="robots" content="follow, index" />
         <meta charSet="UTF-8" />
