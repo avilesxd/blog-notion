@@ -20,19 +20,22 @@ const Container = ({ children, layout, fullWidth, ...customMeta }) => {
     <div>
       <Head>
         <title>{meta.title}</title>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF0MBVRHC5"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FF0MBVRHC5');
+      `,
+          }}
+        />
         {/* Google AdSense */}
         <meta name="google-adsense-account" content="ca-pub-5625393864502632"></meta>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5625393864502632"
           crossorigin="anonymous"></script>
-        {/*Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF0MBVRHC5"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-FF0MBVRHC5');
-        </script>
         {/* <meta content={BLOG.darkBackground} name="theme-color" /> */}
         <meta name="robots" content="follow, index" />
         <meta charSet="UTF-8" />
