@@ -19,24 +19,36 @@ import TableOfContents from '@/components/TableOfContents'
  * @prop {string}   emailHash  - Author email hash (for Gravatar)
  * @prop {boolean} [fullWidth] - Whether in full-width mode
  */
-export default function Post (props) {
+export default function Post(props) {
   const BLOG = useConfig()
   const { post, blockMap, emailHash, fullWidth = false } = props
   const { dark } = useTheme()
 
   return (
-    <article className={cn('flex flex-col', fullWidth ? 'md:px-24' : 'items-center')}>
-      <h1 className={cn(
-        'w-full font-bold text-3xl text-black dark:text-white',
-        { 'max-w-2xl px-4': !fullWidth }
-      )}>
+    <article
+      className={cn('flex flex-col', fullWidth ? 'md:px-24' : 'items-center')}
+      itemScope
+      itemType="https://schema.org/BlogPosting"
+    >
+      <h1
+        className={cn(
+          'w-full font-bold text-3xl text-black dark:text-white',
+          { 'max-w-2xl px-4': !fullWidth }
+        )}
+        itemProp="headline"
+      >
         {post.title}
       </h1>
       {post.type[0] !== 'Page' && (
-        <nav className={cn(
-          'w-full flex mt-7 items-start text-gray-500 dark:text-gray-400',
-          { 'max-w-2xl px-4': !fullWidth }
-        )}>
+        <nav
+          className={cn(
+            'w-full flex mt-7 items-start text-gray-500 dark:text-gray-400',
+            { 'max-w-2xl px-4': !fullWidth }
+          )}
+          itemProp="author"
+          itemScope
+          itemType="https://schema.org/Person"
+        >
           <div className="flex mb-4">
             <a href={BLOG.socialLink || '#'} className="flex">
               <Image
@@ -45,16 +57,20 @@ export default function Post (props) {
                 height={24}
                 src={`https://gravatar.com/avatar/${emailHash}`}
                 className="rounded-full"
+                itemProp="image"
               />
-              <p className="ml-2 md:block">{BLOG.author}</p>
+              <p className="ml-2 md:block" itemProp="name">{BLOG.author}</p>
             </a>
             <span className="block">&nbsp;/&nbsp;</span>
           </div>
           <div className="mr-2 mb-4 md:ml-0">
-            <FormattedDate date={post.date} />
+            <FormattedDate date={post.date} itemProp="datePublished" />
           </div>
           {post.tags && (
-            <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
+            <div
+              className="flex flex-nowrap max-w-full overflow-x-auto article-tags"
+              itemProp="keywords"
+            >
               {post.tags.map(tag => (
                 <TagItem key={tag} tag={tag} />
               ))}
@@ -64,7 +80,10 @@ export default function Post (props) {
       )}
       <div className="self-stretch -mt-4 flex flex-col items-center lg:flex-row lg:items-stretch">
         {!fullWidth && <div className="flex-1 hidden lg:block" />}
-        <div className={fullWidth ? 'flex-1 pr-4' : 'flex-none w-full max-w-2xl px-4'}>
+        <div
+          className={fullWidth ? 'flex-1 pr-4' : 'flex-none w-full max-w-2xl px-4'}
+          itemProp="articleBody"
+        >
           <NotionRenderer recordMap={blockMap} fullPage={false} darkMode={dark} />
         </div>
         <div className={cn('order-first lg:order-[unset] w-full lg:w-auto max-w-2xl lg:max-w-[unset] lg:min-w-[160px]', fullWidth ? 'flex-none' : 'flex-1')}>
